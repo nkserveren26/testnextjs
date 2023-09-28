@@ -1,7 +1,9 @@
 import { NextPage } from "next";
 import Head from "next/head";
 
-type SSGProps = {}
+type SSGProps = {
+    message: string
+}
 
 const SSG: NextPage<SSGProps> = () => {
     return (
