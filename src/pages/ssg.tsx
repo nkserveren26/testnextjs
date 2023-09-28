@@ -31,6 +31,7 @@ const SSG: NextPage<SSGProps> = (props) => {
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
     const timestamp = new Date().toLocaleString();
     const message = `${timestamp} にgetStaticPropsが実行されました`;
+    console.log(message);
     return {
         props: {
             message,
