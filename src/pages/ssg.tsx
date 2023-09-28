@@ -18,6 +18,9 @@ const SSG: NextPage<SSGProps> = (props) => {
                     <p>
                         このページは静的サイト生成によってビルド時に生成されたページです
                     </p>
+                    <p>
+                        {message}
+                    </p>
                 </main>
 
             </div>
@@ -27,7 +30,7 @@ const SSG: NextPage<SSGProps> = (props) => {
 
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
     const timestamp = new Date().toLocaleString();
-    const message = "";
+    const message = `${timestamp} にgetStaticPropsが実行されました`;
     return {
         props: {
             message,
