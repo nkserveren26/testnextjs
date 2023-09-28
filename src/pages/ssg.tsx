@@ -1,11 +1,12 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 
 type SSGProps = {
     message: string
 }
 
-const SSG: NextPage<SSGProps> = () => {
+const SSG: NextPage<SSGProps> = (props) => {
+    const { message } = props;
     return (
         <>
             <div>
@@ -22,7 +23,16 @@ const SSG: NextPage<SSGProps> = () => {
             </div>
         </>
     )
-
 }
 
-export default SSG
+export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
+    const timestamp = new Date().toLocaleString();
+    const message = "";
+    return {
+        props: {
+            message,
+        }
+    }
+}
+
+export default SSG;
