@@ -67,10 +67,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 }
 
+//パスパラメータの型を定義
 interface PostParams extends ParsedUrlQuery {
     id: string
 }
 
+//パスパラメータの型をGetStaticPropsで指定する
 export const getStaticProps: GetStaticProps<PostProps, PostParams> = async (context) => {
     console.log(context.params);
     return {
