@@ -1,6 +1,7 @@
-import { GetStaticPaths, NextPage } from "next"
+import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { ParsedUrlQuery } from "querystring";
 
 type PostProps = {
     id: string
@@ -53,4 +54,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
         paths,
         fallback: false
     };
+}
+
+interface PostParams extends ParsedUrlQuery {
+    id: string
+}
+
+export const getStaticProps: GetStaticProps<PostProps, PostParams> = async (context) => {
+    console.log(context.params);
+    return {
+        props: {
+            id: context.params!["id"],
+        }
+    }
 }
