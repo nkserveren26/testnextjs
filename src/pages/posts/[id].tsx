@@ -1,4 +1,4 @@
-import { NextPage } from "next"
+import { GetStaticPaths, NextPage } from "next"
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -28,4 +28,29 @@ const Post: NextPage<PostProps> = (props) => {
             </main>
         </div>
     );
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    const paths = [
+        {
+            params: {
+                id: "1",
+            },
+        },
+        {
+            params: {
+                id: "2",
+            },
+        },
+        {
+            params: {
+                id: "3",
+            },
+        },
+    ];
+
+    return {
+        paths,
+        fallback: false
+    };
 }
