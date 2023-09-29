@@ -52,7 +52,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     };
 }
 
@@ -68,3 +68,5 @@ export const getStaticProps: GetStaticProps<PostProps, PostParams> = async (cont
         }
     }
 }
+
+export default Post;
