@@ -11,12 +11,12 @@ const ISR: NextPage<ISRProps> = (props) => {
         <>
             <div>
                 <Head>
-                    <title>Static Site Generation</title>
+                    <title>ISR Page</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <main>
                     <p>
-                        このページは静的サイト生成によってビルド時に生成されたページです
+                        このページはISRによってビルド時に生成されたページです
                     </p>
                     <p>
                         {message}
