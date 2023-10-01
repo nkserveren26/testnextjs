@@ -1,4 +1,4 @@
-import { NextPage } from "next"
+import { GetServerSideProps, NextPage } from "next"
 import Head from "next/head"
 
 type SSRProps = {
@@ -26,4 +26,15 @@ const SSR: NextPage<SSRProps> = (props) => {
             </div>
         </>
     )
+}
+
+export const getServerSideProps: GetServerSideProps<SSRProps> = async (context) => {
+    const timestamp = new Date().toLocaleString();
+    const message = "";
+    return {
+        props: {
+            message,
+        }
+    }
+
 }
