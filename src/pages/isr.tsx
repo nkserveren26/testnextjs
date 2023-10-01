@@ -36,6 +36,7 @@ export const getStaticProps: GetStaticProps<ISRProps> = async (context) => {
         props: {
             message,
         },
+        //ISRではページの有効期間を秒単位で指定する
         revalidate: 60,
     }
 }
