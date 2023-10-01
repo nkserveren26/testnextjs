@@ -31,7 +31,8 @@ const ISR: NextPage<ISRProps> = (props) => {
 export const getStaticProps: GetStaticProps<ISRProps> = async (context) => {
     const timestamp = new Date().toLocaleString();
     const message = `${timestamp} にgetStaticPropsが実行されました`;
-    console.log(message);
+
+    //ISRの場合、returnにrevalidateを含める
     return {
         props: {
             message,
