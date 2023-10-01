@@ -38,3 +38,5 @@ export const getServerSideProps: GetServerSideProps<SSRProps> = async (context) 
     }
 
 }
+
+export default SSR;
