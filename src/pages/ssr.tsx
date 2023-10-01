@@ -28,6 +28,7 @@ const SSR: NextPage<SSRProps> = (props) => {
     )
 }
 
+//SSRはGetServerSideProps型の関数を定義し、returnにpropsを含める
 export const getServerSideProps: GetServerSideProps<SSRProps> = async (context) => {
     const timestamp = new Date().toLocaleString();
     const message = `${timestamp} にこのページのgetaServerSidePropsが実行されました`;
