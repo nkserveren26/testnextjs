@@ -35,7 +35,8 @@ export const getStaticProps: GetStaticProps<ISRProps> = async (context) => {
     return {
         props: {
             message,
-        }
+        },
+        revalidate: 60,
     }
 }
 
