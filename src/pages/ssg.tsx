@@ -7,10 +7,14 @@ type SSGProps = {
     message: string
 };
 
-//routerコンポーネントを使う際はuseRouterを呼ぶ
-const router = useRouter();
 
 const SSG: NextPage<SSGProps> = (props) => {
+    //routerコンポーネントを使う際はuseRouterを呼ぶ
+    const router = useRouter();
+
+    const goToSSR = () => {
+        router.push("/ssr");
+    }
     const { message } = props;
     return (
         <>
@@ -31,6 +35,7 @@ const SSG: NextPage<SSGProps> = (props) => {
                         Go To SSR
                     </Link>
                     {/* ページ遷移はrouterのpushメソッドでも可能 */}
+                    <button onClick={goToSSR}>Go To SSR</button>
                 </main>
 
             </div>
