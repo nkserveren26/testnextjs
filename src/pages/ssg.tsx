@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 type SSGProps = {
     message: string
@@ -21,6 +22,9 @@ const SSG: NextPage<SSGProps> = (props) => {
                     <p>
                         {message}
                     </p>
+                    <Link href="/ssr">
+                        <a>Go To SSR</a>
+                    </Link>
                 </main>
 
             </div>
