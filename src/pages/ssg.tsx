@@ -36,6 +36,10 @@ const SSG: NextPage<SSGProps> = (props) => {
 //この関数はビルド時に実行される
 //関数ではreturnにpropsを含める
 //propsはページコンポーネントに渡される
+//SSGはページをビルド時に作成し、それをクライアントに返却するので高速に描画できる
+//初期描画時のデータはビルド時のデータなので古い
+//なので常に最新データを表示したい場合はSSG以外を使う
+//SSGは不変のページもしくは初期描画時のデータが古くても問題ないページ向き
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
     const timestamp = new Date().toLocaleString();
     const message = `${timestamp} にgetStaticPropsが実行されました`;
