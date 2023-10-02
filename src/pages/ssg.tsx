@@ -15,6 +15,7 @@ const SSG: NextPage<SSGProps> = (props) => {
     const goToSSR = () => {
         router.push("/ssr");
     }
+    
     const { message } = props;
     return (
         <>
