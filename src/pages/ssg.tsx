@@ -32,6 +32,10 @@ const SSG: NextPage<SSGProps> = (props) => {
     )
 }
 
+//SSGではGetStaticProps型の関数を定義する
+//この関数はビルド時に実行される
+//関数ではreturnにpropsを含める
+//propsはページコンポーネントに渡される
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
     const timestamp = new Date().toLocaleString();
     const message = `${timestamp} にgetStaticPropsが実行されました`;
