@@ -1,10 +1,14 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 type SSGProps = {
     message: string
-}
+};
+
+//routerコンポーネントを使う際はuseRouterを呼ぶ
+const router = useRouter();
 
 const SSG: NextPage<SSGProps> = (props) => {
     const { message } = props;
@@ -22,9 +26,11 @@ const SSG: NextPage<SSGProps> = (props) => {
                     <p>
                         {message}
                     </p>
+                    {/* Linkコンポーネントはページ遷移に使用する */}
                     <Link href="/ssr">
                         Go To SSR
                     </Link>
+                    {/* ページ遷移はrouterのpushメソッドでも可能 */}
                 </main>
 
             </div>
