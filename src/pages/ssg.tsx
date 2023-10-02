@@ -10,12 +10,13 @@ type SSGProps = {
 
 const SSG: NextPage<SSGProps> = (props) => {
     //routerコンポーネントを使う際はuseRouterを呼ぶ
+    //フックはコンポーネント内で呼ばないとエラーになる
     const router = useRouter();
 
     const goToSSR = () => {
         router.push("/ssr");
     }
-    
+
     const { message } = props;
     return (
         <>
