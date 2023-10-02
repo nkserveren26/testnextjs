@@ -23,7 +23,7 @@ const SSG: NextPage<SSGProps> = (props) => {
                         {message}
                     </p>
                     <Link href="/ssr">
-                        <a>Go To SSR</a>
+                        Go To SSR
                     </Link>
                 </main>
 
