@@ -10,7 +10,7 @@ const ImageSample: NextPage<void> = () => {
             <img src="/images/cloud.png" />
             <p>Imageコンポーネントで表示した場合</p>
             {/* パスを指定する代わりにインポートした画像を指定可能 */}
-            <Image src={CloudImage} alt="image"/>
+            <Image src={CloudImage} alt="image" layout="responsive"/>
             <p>Imageで表示した場合は事前に描画エリアが確保されます</p>
         </div>
     );
