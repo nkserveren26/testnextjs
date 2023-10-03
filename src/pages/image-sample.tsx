@@ -17,7 +17,7 @@ const ImageSample: NextPage<void> = () => {
             <p>外部画像をImageコンポーネントで表示した場合</p>
             {/* 外部画像はwidthとheightを取得できないので、layoutがfill以外の場合は値を明示的に指定する必要がある */}
             {/* 外部画像を表示するために、next.config.jsにドメインを追加する必要がある */}
-            <Image src={imageUrl} alt="image" width="800" height="571" />
+            <Image src={imageUrl} alt="image" layout="responsive" width="800" height="571" />
         </div>
     );
 }
