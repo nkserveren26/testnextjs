@@ -1,4 +1,4 @@
-import { useCallback } from "react"
+import { useCallback, useState } from "react"
 
 const UsePopup = () => {
 
@@ -16,6 +16,10 @@ type CounterButtonProps = {
 
 export const CountButton = (props: CounterButtonProps) => {
     const { label, maximum } = props;
+
+    const displayPopup = UsePopup();
+
+    const [count, setCount] = useState(0);
 
     return (
         <Button />
