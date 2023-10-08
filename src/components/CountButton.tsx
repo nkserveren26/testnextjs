@@ -14,7 +14,8 @@ type CounterButtonProps = {
     maximum: number
 }
 
-export const CountButton = () => {
+export const CountButton = (props: CounterButtonProps) => {
+    const { label, maximum } = props;
 
     return (
         <Button />
