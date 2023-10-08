@@ -20,8 +20,10 @@ type CounterButtonProps = {
 export const CountButton = (props: CounterButtonProps) => {
     const { label, maximum } = props;
 
+    // アラートを表示させるためのフックを使う
     const displayPopup = UsePopup();
 
+    // カウントを保持する状態を定義する
     const [count, setCount] = useState(0);
 
     const disabled = count >= maximum;
