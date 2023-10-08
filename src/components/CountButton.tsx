@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react"
 
+// ポップアップを表示するためのフック
 const UsePopup = () => {
-
     const cb = useCallback((text: string) => {
         prompt(text);
     }, []);
@@ -9,11 +9,14 @@ const UsePopup = () => {
     return cb;
 }
 
+// CountButtonのpropsの型定義
 type CounterButtonProps = {
     label: string,
     maximum: number
 }
 
+// クリックされた回数を表示するボタンを表示するコンポーネント
+// このコンポーネントはContainer Componentであり、ビジネスロジックのみを定義する（コンポーネントの見た目は定義しない）
 export const CountButton = (props: CounterButtonProps) => {
     const { label, maximum } = props;
 
