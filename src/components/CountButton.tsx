@@ -21,6 +21,9 @@ export const CountButton = (props: CounterButtonProps) => {
 
     const [count, setCount] = useState(0);
 
+    const disabled = count >= maximum;
+    const text = disabled ? "Can\'t click any more" : `You've clicked ${count} times`;
+
     return (
         <Button />
     )
