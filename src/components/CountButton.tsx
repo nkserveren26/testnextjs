@@ -26,7 +26,7 @@ export const CountButton = (props: CounterButtonProps) => {
     // カウントを保持する状態を定義する
     const [count, setCount] = useState(0);
 
-    const onCLick = useCallback(() => {
+    const onClick = useCallback(() => {
         const newCount = count + 1;
         setCount(newCount);
 
