@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import { Button } from "./Button";
 
 // ポップアップを表示するためのフック
 const UsePopup = () => {
@@ -39,6 +40,6 @@ export const CountButton = (props: CounterButtonProps) => {
     const text = disabled ? "Can\'t click any more" : `You've clicked ${count} times`;
 
     return (
-        <Button />
+        <Button disabled={disabled} onClick={onClick} label={label} text={text}/>
     )
 }
