@@ -1,6 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+学習メモ
 
-## Getting Started
+## メモ化
+関数や変数の値を保持し、同一の呼び出しがあったときにその値を返す（再利用する）仕組み。
+
+## useCallback
+関数をメモ化し、その関数を返すフック。
+useCallback(関数, [])
+第1引数にメモ化する関数を指定
+第2引数に配列を指定
+
+関数の再描画が行われるかは第2引数の配列の値の中身で決まる
+　再描画前と再描画後で配列の中の値が同じ→メモ化時に作成した関数を返す
+　再描画前と再描画後で配列の中の値が異なる→新しく関数を作成し、それを返す
+
+基本的に、不要な再レンダリングを防ぐためにuseCallbackは使われる
 
 First, run the development server:
 
