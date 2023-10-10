@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { CountButton } from "@/components/CountButton";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -39,6 +40,7 @@ const SSG: NextPage<SSGProps> = (props) => {
                     </Link>
                     {/* ページ遷移はrouterのpushメソッドでも可能 */}
                     <button onClick={goToSSR}>Go To SSR</button>
+                    <CountButton label="testbutton" maximum={5}/>
                 </main>
 
             </div>
