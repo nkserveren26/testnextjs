@@ -26,6 +26,15 @@ export const CountButton = (props: CounterButtonProps) => {
     // カウントを保持する状態を定義する
     const [count, setCount] = useState(0);
 
+    const onCLick = useCallback(() => {
+        const newCount = count + 1;
+        setCount(newCount);
+
+        if(newCount >= maximum) {
+            displayPopup(`You've clicked ${newCount} times`);
+        }
+    }, [count, maximum]);
+
     const disabled = count >= maximum;
     const text = disabled ? "Can\'t click any more" : `You've clicked ${count} times`;
 
