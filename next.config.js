@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["msp.c.yimg.jp"],
+  },
+  compiler: {
+    styledComponents: true,
   }
 }
 
