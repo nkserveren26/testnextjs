@@ -41,3 +41,13 @@ Atomsは以下の特徴を持つ。
 （例：ラベル付きのボタンなど）
 
 Moleculesも状態やふるまいを持たず、汎用的に使えるようにするために親から値を受け取って見た目を定義する。  
+
+### Organisms
+複数のMoleculesやAtomsを組み合わせたコンポーネント。  
+Moleculesよりも具体的なUIを定義するものが該当。  
+（サインインフォーム、ヘッダーなど）
+
+また、状態やふるまいを持つ。  
+　Presentational Componentで見た目を定義  
+　Container Componentでビジネスロジック（ふるまい等）を定義  
+
