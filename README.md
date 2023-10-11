@@ -51,3 +51,12 @@ Moleculesよりも具体的なUIを定義するものが該当。
 　Presentational Componentで見た目を定義  
 　Container Componentでビジネスロジック（ふるまい等）を定義  
 
+### Templates
+ページ全体のレイアウトを定義するコンポーネント。  
+複数のOrganism以下のコンポーネントを組み合わせ、それらをCSSでレイアウトする。  
+
+### Pages
+ページ単位のコンポーネント。    
+Pagesでは状態管理やAPIコールなどのふるまいに関するものを実装。  
+（レイアウトはTemplatesで管理）
+
