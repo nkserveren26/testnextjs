@@ -20,7 +20,7 @@ useCallback(関数, [])
 
 ## Atomic Design
 一貫性のあるデザインを作るための考え方、方法論。  
-Atomic Designでは、コンポーネントを以下の階層に分類し、各階層ごとにコンポーネントを定義する。
+Atomic Designでは、コンポーネントを以下の階層に分類し、各階層ごとにコンポーネントを定義する。  
 　Atoms  
 　Molecules  
 　Organisms  
