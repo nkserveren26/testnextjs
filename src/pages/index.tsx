@@ -2,8 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import styled from 'styled-components'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const H1 = styled.h1`
+  color: red;
+`;
 
 export default function Home() {
   return (
@@ -16,6 +21,9 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
+          <H1>
+            Welcome to this Page!
+          </H1>
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.tsx</code>
