@@ -11,6 +11,8 @@ const Button = styled.button<ButtonProps>`
     color: ${(props) => props.color};
     background: ${(props) => props.backGroundColor};
     border: 2px solid ${(props) => props.color};
+
+    font-size: 2em;
 `
 
 const Styledprops: NextPage = () => {
