@@ -7,6 +7,7 @@ type ButtonProps = {
 }
 
 const Button = styled.button<ButtonProps>`
+    /* color, background, borderはpropsの値を使用 */
     color: ${(props) => props.color};
     background: ${(props) => props.backGroundColor};
     border: 2px solid ${(props) => props.color};
