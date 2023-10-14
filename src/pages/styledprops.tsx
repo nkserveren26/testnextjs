@@ -38,6 +38,13 @@ const Text = styled.p`
     ${font}
 `;
 
+//Textを拡張し、ボーダーのスタイルを加えたコンポーネント
+const BorderText = styled(Text)`
+    padding: 8px 16px;
+    border: 3px solid blue;
+    border-radius: 8px;
+`;
+
 const Styledprops: NextPage = () => {
     return (
         <div>
@@ -45,6 +52,7 @@ const Styledprops: NextPage = () => {
                 Hello
             </Button>
             <Text>another button</Text>
+            <BorderText>extend text component</BorderText>
             <AnotherButton>
                 GoodBye
             </AnotherButton>
