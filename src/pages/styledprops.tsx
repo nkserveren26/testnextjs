@@ -53,6 +53,8 @@ const Styledprops: NextPage = () => {
             </Button>
             <Text>another button</Text>
             <BorderText>extend text component</BorderText>
+            {/* asを使って、元々定義した要素と別の要素で要素コンポーネントを表示可能 */}
+            <Text as="a" href="/"> Go to index</Text>
             <AnotherButton>
                 GoodBye
             </AnotherButton>
