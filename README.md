@@ -58,5 +58,6 @@ Moleculesよりも具体的なUIを定義するものが該当。
 ### Pages
 ページ単位のコンポーネント。    
 Pagesでは状態管理やAPIコールなどのふるまいに関するものを実装。  
-（レイアウトはTemplatesで管理）
+（レイアウトはTemplatesで管理）  
 
+Pageコンポーネントはpagesディレクトリ直下に配置し、export defaultを指定する。
