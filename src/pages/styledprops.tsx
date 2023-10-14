@@ -15,7 +15,7 @@ const redBox = css`
 
 const font = css`
     color: blue;
-    font-size: 10px;
+    font-size: 15px;
 `;
 
 //styled-componentで定義したコンポーネントの先頭文字は大文字にする。小文字だとエラーになる
@@ -33,13 +33,18 @@ const AnotherButton = styled.button`
     ${font}
 `;
 
+const Text = styled.p`
+    font-weight: bold;
+    ${font}
+`;
+
 const Styledprops: NextPage = () => {
     return (
         <div>
             <Button color="#FF0000" backGroundColor="transparent">
                 Hello
             </Button>
-            <p>another button</p>
+            <Text>another button</Text>
             <AnotherButton>
                 GoodBye
             </AnotherButton>
