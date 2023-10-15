@@ -7,6 +7,22 @@
 href属性で遷移先ページのリンクを指定する。  
 LinkコンポーネントのpropsはLinkPropsで定義されている。
 
+### PropsWithChildren
+childrenの型を定義する。  
+
+childrenを関数コンポーネントで受け取る際、childrenの型を次のように定義する。
+```sample.tsx
+function Component({ children }: { children: ReactNode; }) {
+    ...
+};
+```
+
+```
+function Component({ children }: PropsWithChildren) {
+    ...
+};
+```
+
 ## メモ化
 関数や変数の値を保持し、同一の呼び出しがあったときにその値を返す（再利用する）仕組み。
 
