@@ -61,3 +61,5 @@ Pagesでは状態管理やAPIコールなどのふるまいに関するものを
 （レイアウトはTemplatesで管理）  
 
 Pageコンポーネントはpagesディレクトリ直下に配置し、export defaultを指定する。
+
+## styled-component
