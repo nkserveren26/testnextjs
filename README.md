@@ -10,13 +10,14 @@ LinkコンポーネントのpropsはLinkPropsで定義されている。
 ### PropsWithChildren
 childrenの型を定義する。  
 
-childrenを関数コンポーネントで受け取る際、childrenの型を次のように定義する。
+childrenを関数コンポーネントで受け取る際、childrenの型を次のように定義するのがやり方の1つ。
 ```sample.tsx
 function Component({ children }: { children: ReactNode; }) {
     ...
 };
 ```
 
+PropsWithChildrenを使えば↑よりも簡潔に書ける。
 ```
 function Component({ children }: PropsWithChildren) {
     ...
