@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Link, { LinkProps } from "next/link";
+import { styled } from "styled-components";
 
 type BaseLinkProps = React.PropsWithChildren<LinkProps> & {
     className?: string,
@@ -13,11 +14,18 @@ const BaseLink = (props: BaseLinkProps) => {
             <a className={className}>{children}</a>
         </Link>
     );
-
 }
+
+const StyledLink = styled(BaseLink)`
+    color: blue;
+    font: 15px;
+`;
 
 const StyleSample: NextPage = () => {
     return (
-        <div></div>
+        <div>
+            {/* 青色のリンクを表示する */}
+
+        </div>
     );
 }
