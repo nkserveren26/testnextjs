@@ -24,7 +24,7 @@ function Component({ children }: PropsWithChildren) {
 };
 ```
 
-propsにプロパティを追加したい場合は以下のように書く（追加のプロパティを&の後に記載）。
+propsを追加したい場合は以下のように書く（&の後に記載）。
 ```sample.tsx
 function Component({ children }: PropsWithChildren & {
     color:string;
@@ -32,6 +32,16 @@ function Component({ children }: PropsWithChildren & {
     ...
 };
 ```
+
+もしくはpropsの型を予め定義し、ジェネリクスでpropsの型を指定する。
+```sample.tsx
+type HogeType = { color:string }
+
+function Component({ children }: PropsWithChildren<HogeType>) {
+    ...
+};
+```
+
 
 
 ## メモ化
