@@ -33,7 +33,7 @@ function Component({ children }: PropsWithChildren & {
 };
 ```
 
-もしくはpropsの型を予め定義し、ジェネリクスでpropsの型を指定する。
+もしくはpropsの型を予め定義し、PropsWithChildrenのジェネリクスでpropsの型を指定する。
 ```sample.tsx
 type HogeType = { color:string }
 
