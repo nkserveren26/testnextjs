@@ -18,11 +18,21 @@ function Component({ children }: { children: ReactNode; }) {
 ```
 
 PropsWithChildrenを使えば↑よりも簡潔に書ける。
-```
+```sample.tsx
 function Component({ children }: PropsWithChildren) {
     ...
 };
 ```
+
+propsにプロパティを追加したい場合は以下のように書く（追加のプロパティを&の後に記載）。
+```sample.tsx
+function Component({ children }: PropsWithChildren & {
+    color:string;
+}) {
+    ...
+};
+```
+
 
 ## メモ化
 関数や変数の値を保持し、同一の呼び出しがあったときにその値を返す（再利用する）仕組み。
