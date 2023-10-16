@@ -130,7 +130,34 @@ export const theme = {
 ```
 
 Themeを使う際は、_app.tsxでThemeProviderを置き、themeプロパティに値を渡す。  
-```
+```_app.tsx
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    //Themeを使う際はThemeProviderを使用し、themeプロパティに値を渡す
+    <ThemeProvider theme={theme}>
+    <Component {...pageProps} />
+    </ThemeProvider>
+  ); 
+}
 ```
 
-コンポーネントでは、props.themeで値を参照する。  
+コンポーネントでは、props.themeで値を参照する。 
+```sample.tsx
+import { NextPage } from "next";
+import { styled } from "styled-components";
+
+const Text = styled.span`
+    color: ${(props) => props.theme.colors.red};
+`;
+
+
+const ThemeSample: NextPage = () => {
+    return (
+        <div>
+            <Text>Themeから参照した色を使用</Text>
+        </div>
+    );
+}
+
+export default ThemeSample;
+``` 
