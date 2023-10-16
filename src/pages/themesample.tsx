@@ -2,8 +2,9 @@ import { NextPage } from "next";
 import { styled } from "styled-components";
 
 const Text = styled.span`
-    color: ${(props) => props.theme.colors.red}
+    color: ${(props) => props.theme.colors.red};
 `;
+
 
 const ThemeSample: NextPage = () => {
     return (

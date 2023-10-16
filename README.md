@@ -113,3 +113,24 @@ htmlの各要素やコンポーネントのスタイル（レイアウト）を�
 styled-componentで定義したスタイルは、描画時にスタイルを作成する。  
 そして、そのスタイルに紐づくclassNameを対象コンポーネントのclass属性に指定する。  
 このようにして、対象コンポーネントにCSSのレイアウトが反映されるようになっている。
+
+### Theme
+styled-componentのCSSレイアウト定義手法の1つ。  
+別ファイルでCSSの値を定義し、外部コンポーネントから値を参照して利用することができる。  
+
+```theme.ts
+export const theme = {
+    colors: {
+        white: "#ffffff",
+        black: "#000000",
+        red: "#ff0000",
+    },
+    fontSizes: ["12px", "14px"]
+};
+```
+
+Themeを使う際は、_app.tsxでThemeProviderを置き、themeプロパティに値を渡す。  
+```
+```
+
+コンポーネントでは、props.themeで値を参照する。  
