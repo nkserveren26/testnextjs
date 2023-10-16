@@ -115,7 +115,7 @@ styled-componentで定義したスタイルは、描画時にスタイルを作�
 このようにして、対象コンポーネントにCSSのレイアウトが反映されるようになっている。
 
 ### Theme
-styled-componentのCSSレイアウト定義手法の1つ。  
+styled-componentの機能の1つ。  
 別ファイルでCSSの値を定義し、外部コンポーネントから値を参照して利用することができる。  
 
 ```theme.ts
