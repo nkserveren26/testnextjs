@@ -129,7 +129,7 @@ export const theme = {
 };
 ```
 
-Themeを使う際は、_app.tsxでThemeProviderを置き、themeプロパティに値を渡す。  
+Themeを使う際は、_app.tsxでThemeProviderを置き、themeプロパティに、cssの値が定義されたオブジェクトを渡す。  
 ```_app.tsx
 export default function App({ Component, pageProps }: AppProps) {
   return (
