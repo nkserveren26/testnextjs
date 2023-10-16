@@ -104,7 +104,8 @@ Moleculesよりも具体的なUIを定義するものが該当。
 Pagesでは状態管理やAPIコールなどのふるまいに関するものを実装。  
 （レイアウトはTemplatesで管理）  
 
-Pageコンポーネントはpagesディレクトリ直下に配置し、export defaultを指定する。
+Pageコンポーネントはpagesディレクトリ直下に配置し、export defaultを指定する。  
+Pageコンポーネントの型はNextPageである。
 
 ## styled-component
 CSS in JSの1つ。  
