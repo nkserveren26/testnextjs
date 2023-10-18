@@ -118,7 +118,23 @@ styled-componentで定義したスタイルは、描画時にスタイルを作�
 ### mixin
 CSSの定義を再利用する機能。  
 CSSの定義を別のスタイルで使用できる。  
+```sample.tsx
+const redBox = css`
+    padding: 0.25em 1em;
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+`;
 
+const font = css`
+    color: blue;
+    font-size: 15px;
+`;
+
+const AnotherButton = styled.button`
+    ${redBox}
+    ${font}
+`;
+```
 
 ### Theme
 styled-componentの機能の1つ。  
