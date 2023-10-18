@@ -115,8 +115,8 @@ styled-componentで定義したスタイルは、描画時にスタイルを作�
 そして、そのスタイルに紐づくclassNameを対象コンポーネントのclass属性に指定する。  
 このようにして、対象コンポーネントにCSSのレイアウトが反映されるようになっている。
 
-styled-componentで定義したスタイルの先頭文字は大文字にする。  
-小文字だとエラーになる。
+styled-componentで定義したスタイルの先頭文字は大文字にする（小文字だとエラーになる）。  
+また、スタイルはprops経由でレイアウトに値を渡すこともできる。
 ```sample.tsx
 const Button = styled.button<ButtonProps>`
     /* color, background, borderはpropsの値を使用 */
