@@ -18,7 +18,7 @@ const font = css`
     font-size: 15px;
 `;
 
-//styled-componentで定義したコンポーネントの先頭文字は大文字にする。小文字だとエラーになる
+//styled-componentで定義したスタイルの先頭文字は大文字にする。小文字だとエラーになる
 const Button = styled.button<ButtonProps>`
     /* color, background, borderはpropsの値を使用 */
     color: ${(props) => props.color};
