@@ -130,6 +130,7 @@ const font = css`
     font-size: 15px;
 `;
 
+//↑で定義したスタイルを利用
 const AnotherButton = styled.button`
     ${redBox}
     ${font}
