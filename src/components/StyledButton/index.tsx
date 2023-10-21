@@ -33,5 +33,9 @@ export const StyledButton = styled.button<StyledButtonProps>`
     line-height: 22px;
     letter-spacing: 0;
     cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
 `;
 
