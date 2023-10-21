@@ -26,5 +26,12 @@ export const StyledButton = styled.button<StyledButtonProps>`
             border: ${style.border};
         `;
     }}
+
+    border-radius: 12px;
+    font-size: 14px;
+    height: 38px;
+    line-height: 22px;
+    letter-spacing: 0;
+    cursor: pointer;
 `;
 
