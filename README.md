@@ -239,9 +239,10 @@ $ npm run storybook
 storiesディレクトリに以下の名前のファイルを作成する。  
 例：<コンポーネント名>.stories.tsx
 
-export default内に、Storybook上での表示設定をまとめたオブジェクトを定義
+export default内に、Storybook上での表示設定をまとめたオブジェクトをMeta型として定義
 　title：Storybook上での表示名
 　component：表示するコンポーネント
+　Metaのジェネリクスの型にはtypeofでコンポーネントを指定
 ```sample.tsx
 export default {
     // グループ名
