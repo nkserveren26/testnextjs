@@ -14,4 +14,12 @@ export const Primary = (props) => {
             Primary
         </StyledButton>
     )
+};
+
+export const Success = (props) => {
+    return (
+        <StyledButton {...props} variant="success">
+            Success
+        </StyledButton>
+    );
 }
