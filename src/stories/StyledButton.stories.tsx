@@ -19,7 +19,7 @@ const incrementAction = action("increment");
 export const Primary = (props) => {
     const [count, setCount] = useState(0);
     const onClick = (e: React.MouseEvent) => {
-        //引数にActionタブで表示したい値を渡す
+        //actionで定義した関数の引数にActionタブで表示したい値を渡す
         incrementAction(e, count);
         setCount((c: number) => c + 1);
     }

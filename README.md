@@ -313,7 +313,7 @@ const incrementAction = action("increment");
 export const Primary = (props) => {
     const [count, setCount] = useState(0);
     const onClick = (e: React.MouseEvent) => {
-        //アクション実行関数の引数にActionタブで表示したい値を渡す
+        //actionで定義した関数の引数にActionタブで表示したい値を渡す
         incrementAction(e, count);
         setCount((c: number) => c + 1);
     }
@@ -325,3 +325,5 @@ export const Primary = (props) => {
     )
 };
 ```
+イベント実行後、actionで定義した関数の引数に渡した値がActionsタブで表示される。
+![Alt text](image-2.png)
