@@ -270,3 +270,6 @@ export const Primary = (props) => {
     )
 };
 ```
+
+Storybook上ではこのように表示される。  
+![Alt text](image.png)
