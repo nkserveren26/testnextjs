@@ -232,5 +232,21 @@ $ npm run storybook
 ```
 
 起動が完了すると、自動でStorybookがブラウザ表示される。  
+また、src配下にstoriesディレクトリが作成される。  
+
 
 ### コンポーネントの表示
+storiesディレクトリに以下の名前のファイルを作成する。  
+例：<コンポーネント名>.stories.tsx
+
+export default内に、Storybook上での表示設定をまとめたオブジェクトを定義
+　title：Storybook上での表示名
+　component：表示するコンポーネント
+```sample.tsx
+export default {
+    // グループ名
+    title: "StyledButton",
+    // 使用するコンポーネント
+    component: StyledButton,
+} as Meta<typeof StyledButton>;
+```
