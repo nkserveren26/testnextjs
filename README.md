@@ -218,3 +218,17 @@ const ThemeSample: NextPage = () => {
 
 export default ThemeSample;
 ``` 
+
+## Storybook
+コンポーネント開発支援ツール。  
+ブラウザ上でコンポーネントの表示を確認できる。  
+これを使えば、確認用のページコンポーネントを用意しなくても、コンポーネントが正しく表示されているか確認できる。  
+
+### 使用方法
+以下のコマンドを実行。
+```
+$ npx sb@latest init
+$ npm run storybook
+```
+
+
