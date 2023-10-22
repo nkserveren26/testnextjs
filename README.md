@@ -231,4 +231,6 @@ $ npx sb@latest init
 $ npm run storybook
 ```
 
+起動が完了すると、自動でStorybookがブラウザ表示される。  
 
+### コンポーネントの表示
