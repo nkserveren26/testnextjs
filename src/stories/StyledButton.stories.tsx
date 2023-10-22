@@ -12,7 +12,7 @@ export default {
     //argTypes: { onClick: {action: "clicked"}},
 } as Meta<typeof StyledButton>;
 
-//任意のデータをActionタブに表示したい場合はactionsで定義する
+//任意のデータをActionタブに表示したい場合はactionで定義する
 const incrementAction = action("increment");
 
 //変数名がStory上に表示される
