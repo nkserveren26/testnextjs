@@ -242,7 +242,8 @@ storiesディレクトリに以下の名前のファイルを作成する。
 export default内に、Storybook上での表示設定をまとめたオブジェクトをMeta型として定義
 　title：Storybook上での表示名
 　component：表示するコンポーネント
-　Metaのジェネリクスの型にはtypeofでコンポーネントを指定
+　Metaのジェネリクスの型にはtypeofでコンポーネントを指定  
+　※バージョン6まではComponentMetaが使われたが、7で非推奨になった
 ```sample.tsx
 export default {
     // グループ名
