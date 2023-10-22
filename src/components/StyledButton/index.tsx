@@ -2,16 +2,16 @@ import { css, styled } from "styled-components"
 
 const variants = {
     primary: {
-        color: "#fffff",
+        color: "#ffffff",
         backgroundColor: "#103461",
         border: "none"
     },
     success: {
-        color: "#fffff",
+        color: "#ffffff",
         backgroundColor: "#SAB203",
         border: "none"
     }
-} as const
+} as const;
 
 type StyledButtonProps = {
     variant: keyof typeof variants
