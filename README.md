@@ -251,3 +251,22 @@ export default {
     component: StyledButton,
 } as Meta<typeof StyledButton>;
 ```
+
+同じファイル内で、Storybookで表示するコンポーネントをreturnする変数をexportで定義。  
+```sample.tsx
+export default {
+    // グループ名
+    title: "StyledButton",
+    // 使用するコンポーネント
+    component: StyledButton,
+} as Meta<typeof StyledButton>;
+
+//変数名がStory上に表示される
+export const Primary = (props) => {
+    return (
+        <StyledButton {...props} variant="primary">
+            Count: {count}
+        </StyledButton>
+    )
+};
+```
