@@ -276,6 +276,7 @@ Storybook上ではこのように表示される。
 ![Alt text](image.png)
 
 Storybook上でコンポーネントのイベント発生時の挙動を確認するにはargTypeを使用。  
+```
 export default {
     // グループ名
     title: "StyledButton",
@@ -284,3 +285,4 @@ export default {
     //onClickが呼ばれたときにclickedというアクションを出力する
     argTypes: { onClick: {action: "clicked"}},
 } as Meta<typeof StyledButton>;
+```
