@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import { Meta, StoryFn, StoryObj } from "@storybook/react";
 import { StyledButton } from "../components/StyledButton";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
@@ -10,6 +10,15 @@ export default {
     component: StyledButton,
     //onClickが呼ばれたときにclickedというアクションを出力する
     //argTypes: { onClick: {action: "clicked"}},
+    argTypes: {
+        variant: {
+            control: {type: "radio"},
+            options: ["primary", "success"],
+        },
+        children: {
+            control: {type: "text"},
+        },
+    },
 } as Meta<typeof StyledButton>;
 
 //任意のデータをActionタブに表示したい場合はactionで定義する
@@ -37,4 +46,17 @@ export const Success = (props) => {
             Success
         </StyledButton>
     );
+}
+
+
+//バージョン7ではStoryは非推奨なのでStoryFnを使う
+//テンプレートコンポーネントの作成
+const Template: StoryFn<typeof StyledButton> = (args) => <StyledButton {...args}/>
+
+//bind関数を呼び出し、テンプレートコンポーネントをStoryに登録
+export const TemplateTest = Template.bind({});
+
+TemplateTest.args = {
+    variant: "primary",
+    children: "primary"
 }
