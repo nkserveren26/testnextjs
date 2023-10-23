@@ -10,6 +10,7 @@ export default {
     component: StyledButton,
     //onClickが呼ばれたときにclickedというアクションを出力する
     //argTypes: { onClick: {action: "clicked"}},
+    //Controlタブでコンポーネントのpropsを制御する場合はargTypesでpropsの値を定義
     argTypes: {
         variant: {
             control: {type: "radio"},
