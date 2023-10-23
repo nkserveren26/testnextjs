@@ -385,17 +385,10 @@ StyledButtonはカスタムボタンコンポーネントです。`variant`で�
 
 ### Primary
 
-```tsx
-<StyledButton variant="primary">Primary</StyledButton>
-```
 
 <StyledButton variant="primary">Primary</StyledButton>
 
 ### Success
-
-```tsx
-<StyledButton variant="success">Success</StyledButton>
-```
 
 <StyledButton variant="success">Success</StyledButton>
 ```
