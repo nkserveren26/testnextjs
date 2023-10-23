@@ -2,6 +2,7 @@ import { Meta, StoryFn } from "@storybook/react";
 import { StyledButton } from "../components/StyledButton";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
+import MDXDocument from "./StyledButton.mdx";
 
 export default {
     // グループ名
@@ -20,6 +21,11 @@ export default {
             control: {type: "text"},
         },
     },
+    parameters: {
+        docs: {
+            page: MDXDocument
+        }
+    }
 } as Meta<typeof StyledButton>;
 
 //任意のデータをActionタブに表示したい場合はactionで定義する
