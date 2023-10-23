@@ -376,6 +376,33 @@ DocsはStorybook上でドキュメントを表示する機能。
 
 ドキュメントはmdxで定義し、それをStoryのMetaのparametersに渡すことで表示できる。  
 
+```sample.tsx
+export default {
+    // グループ名
+    title: "StyledButton",
+    // 使用するコンポーネント
+    component: StyledButton,
+    //onClickが呼ばれたときにclickedというアクションを出力する
+    //argTypes: { onClick: {action: "clicked"}},
+    //Controlタブでコンポーネントのpropsを制御する場合はargTypesでpropsの値を定義
+    argTypes: {
+        variant: {
+            control: {type: "radio"},
+            options: ["primary", "success"],
+        },
+        children: {
+            control: {type: "text"},
+        },
+    },
+    parameters: {
+        docs: {
+            page: MDXDocument
+        }
+    }
+} as Meta<typeof StyledButton>;
+```
+
+StyledButton.mdx
 ```sample.mdx
 import { StyledButton } from "../components/StyledButton";
 
