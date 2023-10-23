@@ -367,3 +367,6 @@ TemplateTest.args = {
     children: "primary"
 }
 ```
+
+argTypesで定義した内容で、Controlタブでpropsを制御できる。  
+![Alt text](image-3.png)
