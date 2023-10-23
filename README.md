@@ -370,3 +370,32 @@ TemplateTest.args = {
 
 argTypesで定義した内容で、Controlタブでpropsを制御できる。  
 ![Alt text](image-3.png)
+
+DocsはStorybook上でドキュメントを表示する機能。  
+コンポーネントのドキュメントを表示することができる。  
+
+ドキュメントはmdxで定義し、それをStoryのMetaのparametersに渡すことで表示できる。  
+
+```sample.mdx
+import { StyledButton } from "../components/StyledButton";
+
+## StyledButton
+
+StyledButtonはカスタムボタンコンポーネントです。`variant`でボタンの色を切り替えることができます。
+
+### Primary
+
+```tsx
+<StyledButton variant="primary">Primary</StyledButton>
+```
+
+<StyledButton variant="primary">Primary</StyledButton>
+
+### Success
+
+```tsx
+<StyledButton variant="success">Success</StyledButton>
+```
+
+<StyledButton variant="success">Success</StyledButton>
+```
