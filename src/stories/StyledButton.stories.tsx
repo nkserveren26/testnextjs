@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { StyledButton } from "../components/StyledButton";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
@@ -57,6 +57,7 @@ const Template: StoryFn<typeof StyledButton> = (args) => <StyledButton {...args}
 //bind関数を呼び出し、テンプレートコンポーネントをStoryに登録
 export const TemplateTest = Template.bind({});
 
+//デフォルトのpropsを設定
 TemplateTest.args = {
     variant: "primary",
     children: "primary"

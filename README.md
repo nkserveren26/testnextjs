@@ -327,3 +327,43 @@ export const Primary = (props) => {
 ```
 イベント実行後、actionで定義した関数の引数に渡した値がActionsタブで表示される。
 ![Alt text](image-2.png)
+
+コンポーネントに渡すpropsの制御はControlタブで行う。  
+まず、メタデータ内のargTypesで、propsの値を定義する。  
+そして、テンプレートコンポーネントを作成し、それをStoryに登録する。
+```sample.tsx
+import { Meta, StoryFn } from "@storybook/react";
+import { StyledButton } from "../components/StyledButton";
+import { action } from "@storybook/addon-actions";
+import { useState } from "react";
+
+export default {
+    // グループ名
+    title: "StyledButton",
+    // 使用するコンポーネント
+    component: StyledButton,
+    //Controlタブでコンポーネントのpropsを制御する場合はargTypesでpropsの値を定義
+    argTypes: {
+        variant: {
+            control: {type: "radio"},
+            options: ["primary", "success"],
+        },
+        children: {
+            control: {type: "text"},
+        },
+    },
+} as Meta<typeof StyledButton>;
+
+//バージョン7ではStoryは非推奨なのでStoryFnを使う
+//テンプレートコンポーネントの作成
+const Template: StoryFn<typeof StyledButton> = (args) => <StyledButton {...args}/>
+
+//bind関数を呼び出し、テンプレートコンポーネントをStoryに登録
+export const TemplateTest = Template.bind({});
+
+//デフォルトのpropsを設定
+TemplateTest.args = {
+    variant: "primary",
+    children: "primary"
+}
+```
