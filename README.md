@@ -377,6 +377,7 @@ Storybookに機能を追加するパッケージ。
 （これはnpx sb initで初期化したときにデフォルトでインストールされる）
 　@storybook/addon-essentials
 
+#### Docs
 DocsはStorybook上でドキュメントを表示する機能。  
 コンポーネントのドキュメントを表示することができる。  
 
