@@ -476,4 +476,12 @@ export const Primary = (props) => {
         </StyledButton>
     )
 };
+
+export const Success = (props) => {
+    return (
+        <StyledButton {...props} variant="success">
+            Success
+        </StyledButton>
+    );
+}
 ```
