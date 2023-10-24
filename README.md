@@ -371,6 +371,12 @@ TemplateTest.args = {
 argTypesで定義した内容で、Controlタブでpropsを制御できる。  
 ![Alt text](image-3.png)
 
+### アドオン
+Storybookに機能を追加するパッケージ。  
+↑のControlsやActionsはアドオンの1つで、以下のパッケージに含まれている。  
+（これはnpx sb initで初期化したときにデフォルトでインストールされる）
+　@storybook/addon-essentials
+
 DocsはStorybook上でドキュメントを表示する機能。  
 コンポーネントのドキュメントを表示することができる。  
 
