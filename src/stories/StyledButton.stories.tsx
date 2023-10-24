@@ -2,6 +2,7 @@ import { Meta, StoryFn } from "@storybook/react";
 import { StyledButton } from "../components/StyledButton";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
+import { linkTo } from "@storybook/addon-links";
 import MDXDocument from "./StyledButton.mdx";
 
 export default {
@@ -41,7 +42,8 @@ export const Primary = (props) => {
     }
 
     return (
-        <StyledButton {...props} variant="primary" onClick={onClick}>
+        //linkToは別のストーリーへ遷移する関数
+        <StyledButton {...props} variant="primary" onClick={linkTo("StyledButton", "Success")}>
             Count: {count}
         </StyledButton>
     )
