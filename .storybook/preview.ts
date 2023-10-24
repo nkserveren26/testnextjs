@@ -9,6 +9,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    //プレビュー画面のサイズ設定
     viewport: {
       viewports: {
         iphonex: {
@@ -19,15 +20,16 @@ const preview: Preview = {
           },
         },
       },
-      background: {
-        values: [
-          {
-            name: "gray",
-            value: "#808080",
-          },
-        ],
-      },
-    }
+    },
+    //背景色の設定
+    backgrounds: {
+      values: [
+        {
+          name: "gray",
+          value: "#103461",
+        },
+      ],
+    },
   },
 };
 
