@@ -9,5 +9,13 @@ export const parameters = {
                 },
             },
         },
+        background: {
+            values: [
+                {
+                    name: "gray",
+                    value: "#808080",
+                },
+            ],
+        },
     }
 }
