@@ -456,3 +456,24 @@ const preview: Preview = {
   },
 };
 ```
+
+### addon-links
+別のストーリーへ遷移する機能を提供するアドオン。  
+linkTo関数に移動先ストーリーのパスを指定して呼び出すことで、別のストーリーに切り替えることができる。
+```sample.tsx
+export const Primary = (props) => {
+    const [count, setCount] = useState(0);
+    const onClick = (e: React.MouseEvent) => {
+        //actionで定義した関数の引数にActionタブで表示したい値を渡す
+        incrementAction(e, count);
+        setCount((c: number) => c + 1);
+    }
+
+    return (
+        //linkToは別のストーリーへ遷移する関数
+        <StyledButton {...props} variant="primary" onClick={linkTo("StyledButton", "Success")}>
+            Count: {count}
+        </StyledButton>
+    )
+};
+```
