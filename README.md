@@ -419,3 +419,33 @@ StyledButtonはカスタムボタンコンポーネントです。`variant`で�
 
 <StyledButton variant="success">Success</StyledButton>
 ```
+
+Storybook上のviewport（プレビュー画面サイズ）や背景色の設定はstorybook/preview.ts内で定義する。
+```sample.tsx
+const preview: Preview = {
+  parameters: {
+    ...
+    //プレビュー画面のサイズ設定
+    viewport: {
+      viewports: {
+        iphonex: {
+          name: "iPhone X",
+          styles: {
+            width: "375px",
+            height: "812px"
+          },
+        },
+      },
+    },
+    //背景色の設定
+    backgrounds: {
+      values: [
+        {
+          name: "gray",
+          value: "#103461",
+        },
+      ],
+    },
+  },
+};
+```
