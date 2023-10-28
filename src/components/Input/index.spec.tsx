@@ -1,5 +1,5 @@
-import {render, RenderResult} from "@testing-library/react";
-import { afterEach, beforeEach, describe } from "node:test";
+import {render, RenderResult, screen} from "@testing-library/react";
+import { afterEach, beforeEach, describe, it } from "node:test";
 import { Input } from "./index";
 
 describe("Input", () => {
@@ -13,6 +13,12 @@ describe("Input", () => {
     //テストケース実行後に描画していたコンポーネントを開放する
     afterEach(() => {
         renderResult.unmount();
+    });
+
+    it("should empty in input on initial render", ()=> {
+        const inputNode = screen.getByLabelText("Username") as HTMLInputElement;
+
+        expect(inputNode).toHaveValue("");
     });
 
 
