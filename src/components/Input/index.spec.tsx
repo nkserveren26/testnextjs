@@ -15,12 +15,12 @@ describe("Input", () => {
         renderResult.unmount();
     });
 
-    it("should empty in input on initial render", ()=> {
-        const inputNode = screen.getByLabelText("Username") as HTMLInputElement;
+    //jestのテストでは、各テストを実行するたびにDOMがクリーンアップされるので、各テストの中で対象コンポーネントをレンダリング
+    test("should empty in input on initial render", ()=> {
+        render(<Input id="username" label="Username" />);
+        const input = screen.getByLabelText("Username") as HTMLInputElement; // 対象の要素をクエリで取得
 
-        expect(inputNode).toHaveValue("");
+        expect(input.value).toBe(""); // 対象の要素が期待した状態になっているか確認
     });
-
-
 
 });
