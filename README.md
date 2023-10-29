@@ -498,3 +498,28 @@ React Testing Libraryは以下の機能を有している。
 　DOMのプロパティへのアクセス  
 
 ### テスト環境構築
+
+以下のパッケージをインストール
+```
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom
+```
+
+プロジェクトルートディレクトリにjest.setup.jsを作成し、以下を記述する。
+```jest.setup.js
+import '@testing-library/jest-dom';
+```
+
+同じくプロジェクトルートディレクトリにjest.config.jsを作成し、以下を記述する。
+```jest.config.js
+const nextJest = require("next/jest");
+
+const createJestConfig = nextJest({ dir: "./" });
+
+const customJestConfig = {
+    testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules"],
+    setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+    testEnvironment: "jsdom",
+};
+
+module.exports = createJestConfig(customJestConfig);
+```
