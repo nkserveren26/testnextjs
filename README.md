@@ -523,3 +523,14 @@ const customJestConfig = {
 
 module.exports = createJestConfig(customJestConfig);
 ```
+
+package.jsonにテスト実行のためのスクリプトを追加する。
+```
+{
+    ...
+    "scripts": {
+      ...
+      "test": "jest"
+  },
+}
+```
