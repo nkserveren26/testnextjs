@@ -485,3 +485,10 @@ export const Success = (props) => {
     );
 }
 ```
+
+# Reactにおけるユニットテストツール
+Reactのコンポーネントのテストツールはいくつかあるが、公式ではReact Testing Libraryが推奨されており、主流のツールとなっている。
+
+## React Testing Library
+DOM Testing Libraryの1つ。
+実際にコンポーネントを描画して、描画したコンポーネントが存在するDOMにアクセスして、コンポーネントが正しく描画されているかテストする。
