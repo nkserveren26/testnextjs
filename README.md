@@ -534,3 +534,29 @@ package.jsonにテスト実行のためのスクリプトを追加する。
   },
 }
 ```
+
+### テスト準備
+テスト対象のコンポーネントと同じ階層に<コンポーネント名>.spec.tsxファイル（もしくは<コンポーネント名>.test.tsx）を作成する。  
+このファイルにテスト内容を記載する。
+各テストはdescribe関数内にまとめて記述する。
+各テストはtest関数内に記載する。
+　　対象コンポーネントをレンダリング
+　　expect関数を使ってコンポーネントの値等が期待通りの結果かどうか確認  
+
+```sample.spec.tsx
+describe("Input", () => {
+
+    //jestのテストでは、各テストを実行するたびにDOMがクリーンアップされるので、各テストの中で対象コンポーネントをレンダリング
+    test("should empty in input on initial render", ()=> {
+        render(<Input id="username" label="Username" />);
+        const input = screen.getByLabelText("Username") as HTMLInputElement; // 対象の要素をクエリで取得
+
+        expect(input.value).toBe(""); // 対象の要素が期待した状態になっているか確認
+    });
+
+});
+```
+
+### テスト実行
+以下のコマンドを実行してテストを実行する。  
+テストが成功する場合PASSと表示される。  
