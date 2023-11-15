@@ -28,6 +28,7 @@ const Button = styled.button<ButtonProps>`
     font-size: 2em;
 `;
 
+//Another Button
 const AnotherButton = styled.button`
     ${redBox}
     ${font}
