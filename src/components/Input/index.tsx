@@ -5,6 +5,7 @@ type InputProps = JSX.IntrinsicElements["input"] & {
     label: string
 }
 
+//コンポーネント
 export const Input = (props: InputProps) => {
     const {label, ...rest} = props;
     const [text, setText] = useState("");
